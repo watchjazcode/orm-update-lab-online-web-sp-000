@@ -5,11 +5,11 @@ class Student
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
-  attr_accessor :name, :breed, :id
+  attr_accessor :name, :grade, :id
 
-  def initialize(name:, breed:, id: nil) #nil because if we don't provide id database will do it for us.
+  def initialize(name:, grade:, id: nil) #nil because if we don't provide id database will do it for us.
     @name = name
-    @breed = breed
+    @grade = grade
     @id = id
   end
 
