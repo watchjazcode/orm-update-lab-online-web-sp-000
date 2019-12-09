@@ -46,8 +46,11 @@ class Student
     Student.new(name, grade).save
   end
 
+  #row = [1, "Pat", 12]
+  #pat = Student.new_from_db(row)
+
   def self.new_from_db(row)
-    Student.new(row[1]name, row[2]grade, row[0]id)
+    Student.new(row[1], row[2], row[0])
   end
 
   def self.find_by_name(name)
