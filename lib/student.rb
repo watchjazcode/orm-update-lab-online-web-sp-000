@@ -7,7 +7,9 @@ class Student
 
   attr_accessor :name, :grade, :id
 
-  def initialize(name:, grade:, id: nil) #nil because if we don't provide id database will do it for us.
+  #student = Student.new("Tiffany", "11th")
+
+  def initialize(name, grade, id = nil)
     @name = name
     @grade = grade
     @id = id
