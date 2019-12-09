@@ -41,16 +41,16 @@ class Student
   end
 
   def self.new_from_db(row)
-    Dog.new(id: row[0], name: row[1], breed: row[2])
+    Student.new(id: row[0], name: row[1], grade: row[2])
   end
 
   def self.find_by_name(name)
-    dog_data = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? ", name)
-    return self.new_from_db(dog_data[0])
+    student_data = DB[:conn].execute("SELECT * FROM students WHERE name = ? ", name)
+    return self.new_from_db(student_data[0])
   end
 
   def update
-    DB[:conn].execute("UPDATE dogs SET name = ? WHERE id = ?", @name, @id) #coming from instance, so instance variables
+    DB[:conn].execute("UPDATE students SET name = ? WHERE id = ?", @name, @id)
   end
 
 end
