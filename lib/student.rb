@@ -40,10 +40,10 @@ class Student
     return self
   end
 
-    #Student.create(name: "Sally", grade: "10th")
+    #Student.create("Sally", "10th")
 
-  def self.create(attributes)
-    Student.new(attributes[:name], attributes[:grade]).save
+  def self.create(name, grade)
+    Student.new(name, grade).save
   end
 
   def self.new_from_db(row)
